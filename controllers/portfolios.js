@@ -1,3 +1,9 @@
+const mongoose = require("mongoose");
 
-exports.getPortfolios = (req, res) => res.json({ random: [27, 35, 46, 62] })
+const Portfolio = mongoose.model('Portfolio'); // Capitalizing the 1st alphabet of a model var is good practice
 
+exports.getPortfolios = async (req, res) => {
+    // Portfolio models provide lots of funcitions | find() fetch data from db and find({}) fetches everything
+    const portfolios = await Portfolio.find({});
+    return res.json(portfolios);
+}
