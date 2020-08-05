@@ -7,3 +7,14 @@ exports.getPortfolios = async (req, res) => {
     const portfolios = await Portfolio.find({});
     return res.json(portfolios);
 }
+
+
+exports.getPortfolioById = async (req, res) => {
+    try {
+        // The id provided in url /api/v1/portfolios/:id -> is available is request, at req.params.id
+        const portfolio = await Portfolio.findById(req.params.id);
+        return res.json(portfolio);
+    } catch (error) {
+        return res.status(400).send("API Error!!...");
+    }
+}
