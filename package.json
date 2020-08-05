@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/guhandelta/NextJS-React-Portfolio-API#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
