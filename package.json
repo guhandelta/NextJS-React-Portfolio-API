@@ -1,0 +1,28 @@
+{
+  "name": "portfolio-api",
+  "version": "1.0.0",
+  "description": "Api endpoints for my portfolio website, using NodeJS and ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guhandelta/NextJS-React-Portfolio-API.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "API",
+    "NodeJS",
+    "Node"
+  ],
+  "author": "Guhaprasaanth Nandagopal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guhandelta/NextJS-React-Portfolio-API/issues"
+  },
+  "homepage": "https://github.com/guhandelta/NextJS-React-Portfolio-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
