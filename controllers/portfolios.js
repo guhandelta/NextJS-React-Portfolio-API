@@ -18,3 +18,10 @@ exports.getPortfolioById = async (req, res) => {
         return res.status(400).send("API Error!!...");
     }
 }
+
+exports.createPortfolio = async (req, res) => {
+
+    const data = req.body;
+    console.log(data);
+    return res.json({ message: 'This endpoint works!!..' })
+}
