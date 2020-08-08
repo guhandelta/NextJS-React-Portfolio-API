@@ -21,7 +21,16 @@ exports.getPortfolioById = async (req, res) => {
 
 exports.createPortfolio = async (req, res) => {
 
-    const data = req.body;
-    console.log(data);
-    return res.json({ message: 'This endpoint works!!..' })
+    console.log(req.body);
+
+    res.json({ message: 'Portfolio created successfully....' });
+
+    // const portfolioData = req.body;
+    // const portfolio = new Portfolio(portfolioData); // Creating an instance of the Portfolio Model
+    // try {
+    //     const newPortfolio = await portfolio.save(); // Creates and return the new portfolio, that was added/created
+    //     return res.json(newPortfolio);
+    // } catch (error) {
+    //     return res.status(422).send(error.message);
+    // }
 }
