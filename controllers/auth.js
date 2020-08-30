@@ -13,4 +13,4 @@ exports.checkJWT = jwt({
     audience: 'https://guhaprasaanth.auth0.com/api/v2/',
     issuer: 'https://guhaprasaanth.auth0.com/',
     algorithms: ['RS256']
-})
+}); 
