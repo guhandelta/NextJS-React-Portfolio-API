@@ -5,7 +5,8 @@ const {
     createPortfolio,
     getPortfolios,
     getPortfolioById,
-    updatePortfolio
+    updatePortfolio,
+    deletePortfolio
 } = require('../controllers/portfolios');
 
 // Middleware to check if the user is authenticated/admin
@@ -16,8 +17,10 @@ router.get('', getPortfolios);
 router.get('/:id', getPortfolioById);
 
 // Adding the auth middleware, allows only the authenticated users to access this endpoint
-router.post('', checkJWT, createPortfolio)
+router.post('', checkJWT, createPortfolio);
 
-router.patch('/:id', checkJWT, updatePortfolio)
+router.patch('/:id', checkJWT, updatePortfolio);
+
+router.delete('/:id', checkJWT, deletePortfolio);
 
 module.exports = router;
