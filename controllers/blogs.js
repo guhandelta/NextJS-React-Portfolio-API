@@ -16,3 +16,16 @@ exports.getBlogBySlug = async (req, res) => {
     const blog = await Blog.findOne({ slug: req.params.slug });
     res.json(blog);
 }
+
+exports.createBlog = async (req, res) => {
+    const blogData = req.body;
+    blogData.userId = req.user.sub; // to get the ID of the user
+    const blog = new Blog(blogData);
+
+    try {
+        const blogPost = await blog.save();
+        return res.json(blogPost);
+    } catch (e) {
+        return res.status(401).send(e);
+    }
+}
