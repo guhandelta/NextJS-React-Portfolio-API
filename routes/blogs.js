@@ -9,10 +9,12 @@ const {
     getBlogById,
     getBlogBySlug,
     createBlog,
-    updateBlog
+    updateBlog,
+    getBlogsByUser
 } = require('../controllers/blogs');
 
 router.get('', getBlogs);
+router.get('/me', checkJWT, checkRole('admin'), getBlogsByUser);
 router.get('/:id', getBlogById);
 router.get('/s/:slug', getBlogBySlug); // getBlogs route and getBlogById route are bascically the same, but the getBlogBySlug requires-
 //- a unique address, so `/s` is added.

@@ -26,10 +26,15 @@ exports.createBlog = async (req, res) => {
         const blogPost = await blog.save();
         return res.json(blogPost);
     } catch (e) {
-        return res.status(401).send(e);
+        return res.status(401).send(e.message);
     }
 }
 
+exports.getBlogsByUser = async (req, res) => {
+    const userId = req.user.sub;
+    const blogs = await Blog.find({ userId });
+    return res.json(blogs);
+}
 
 exports.updateBlog = async (req, res) => {
     const { body, params: { id } } = req; // Destructurizing the id form the params
@@ -52,4 +57,5 @@ exports.updateBlog = async (req, res) => {
     });
 
 }
+
 
