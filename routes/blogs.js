@@ -8,7 +8,8 @@ const {
     getBlogs,
     getBlogById,
     getBlogBySlug,
-    createBlog
+    createBlog,
+    updateBlog
 } = require('../controllers/blogs');
 
 router.get('', getBlogs);
@@ -16,6 +17,7 @@ router.get('/:id', getBlogById);
 router.get('/s/:slug', getBlogBySlug); // getBlogs route and getBlogById route are bascically the same, but the getBlogBySlug requires-
 //- a unique address, so `/s` is added.
 
-router.post('', checkJWT, checkRole('ádmin'), createBlog);
+router.post('', checkJWT, checkRole('admin'), createBlog);
+router.patch('/:id', checkJWT, checkRole('admin'), updateBlog);
 
 module.exports = router;
