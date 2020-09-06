@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Blog = mongoose.model('Blog')
+const slugify = require('slugify');
 
 exports.getBlogs = async (req, res) => {
     const blogs = await Blog.find({ status: 'published' }).sort({ createdAt: -1 });
@@ -43,6 +44,15 @@ exports.updateBlog = async (req, res) => {
     Blog.findById(id, async (err, blog) => {
         if (err) {
             res.status(422).send(err.message);
+        }
+
+        // if blog contains status | if the status is published | if the blog does not have a slug
+        if (body.status && body.status === 'published' && !blog.slug) {
+            // Creating a slug for the blog from the blog's title
+            blog.slug = slugify(blog.title, {
+                replacement: '-',  // replace spaces with replacement character, defaults to `-`
+                lower: true,      // convert to lower case, defaults to `false`
+            })
         }
 
         blog.set(body); //This will just update the copy/instace of the blog received in findById() and won't make any req to db
