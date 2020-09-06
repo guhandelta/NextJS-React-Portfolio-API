@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Blog = mongoose.model('Blog')
 const slugify = require('slugify');
+const uniqueSlug = require('unique-slug');
 
 exports.getBlogs = async (req, res) => {
     const blogs = await Blog.find({ status: 'published' }).sort({ createdAt: -1 });
@@ -37,6 +38,22 @@ exports.getBlogsByUser = async (req, res) => {
     return res.json(blogs);
 }
 
+const _saveBlog = async blogInstance => {
+    try {
+        const createdBlog = await blogInstance.save();
+        return createdBlog;
+    } catch (err) {
+        if (err.code === 11000 && err.keyPattern && err.keyPattern.slug) { //Checking if the error is due to the slug
+            // Append some content to make it unique
+            blogInstance.slug += `-${uniqueSlug()}`;
+            return _saveBlog(blogInstance); //Recurssive fn call => call the fn again with the new slug and repeat the if the issue still persists
+        }
+
+        //In case the error is not related to the slug
+        throw (err);
+    }
+}
+
 exports.updateBlog = async (req, res) => {
     const { body, params: { id } } = req; // Destructurizing the id form the params
 
@@ -59,7 +76,7 @@ exports.updateBlog = async (req, res) => {
         blog.updatedAt = new Date(); //Getting the time the blog was updated
 
         try {
-            const updatedBlog = await blog.save();
+            const updatedBlog = await _saveBlog(blog);
             return res.json(updatedBlog);
         } catch (err) {
             res.status(422).send(err.message);
