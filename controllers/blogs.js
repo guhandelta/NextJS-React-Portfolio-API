@@ -34,7 +34,11 @@ exports.createBlog = async (req, res) => {
 
 exports.getBlogsByUser = async (req, res) => {
     const userId = req.user.sub;
-    const blogs = await Blog.find({ userId });
+    const blogs = await Blog.find({ // Fetch all the blogs that have a userId and the status is either `draft` or `published`
+        // To make sure the deleted blogs | blogs with status `deleted` are not fetched
+        userId,
+        status: { $in: ['draft', 'published'] }
+    });
     return res.json(blogs);
 }
 
