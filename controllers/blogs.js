@@ -10,6 +10,7 @@ exports.getBlogs = async (req, res) => {
     const blogsWithUsers = [];
     const authors = {};
 
+    // for:of loop is used here instead of map() , as map() wil cause some complex issues while working inside promises
     for (let blog of blogs) {
         // Check if authors has the userId of the author, assign the value or else make the request
         const author = authors[blog.userId] || await getAuth0User(access_token)(blog.userId);
@@ -31,9 +32,9 @@ exports.getBlogBySlug = async (req, res) => {
     // pass in a callback to get the access token here by processing the callback exe for server's res
     // getAccessToken() can either expect an error or body/data/json(different terms)
     const { access_token } = await getAccessToken(); //Since this fn will return a promise
-    const user = await getAuth0User(access_token, blog.userId);
+    const author = await getAuth0User(access_token)(blog.userId);
 
-    return res.json({ blog, user });
+    return res.json({ blog, author });
 }
 
 exports.createBlog = async (req, res) => {
