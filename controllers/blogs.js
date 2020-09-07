@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Blog = mongoose.model('Blog')
 const slugify = require('slugify');
 const uniqueSlug = require('unique-slug');
+const { getAccessToken, getAuth0User } = require('./auth')
 
 exports.getBlogs = async (req, res) => {
     const blogs = await Blog.find({ status: 'published' }).sort({ createdAt: -1 });
@@ -16,7 +17,13 @@ exports.getBlogById = async (req, res) => {
 
 exports.getBlogBySlug = async (req, res) => {
     const blog = await Blog.findOne({ slug: req.params.slug });
-    res.json(blog);
+
+    // pass in a callback to get the access token here by processing the callback exe for server's res
+    // getAccessToken() can either expect an error or body/data/json(different terms)
+    const { access_token } = await getAccessToken(); //Since this fn will return a promise
+    const user = await getAuth0User(access_token, blog.userId);
+
+    return res.json(blog);
 }
 
 exports.createBlog = async (req, res) => {

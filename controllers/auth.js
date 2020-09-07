@@ -1,5 +1,6 @@
 const jwt = require('express-jwt');
 const jwksRSA = require('jwks-rsa');
+const request = require('request');
 const config = require('../config/dev')
 
 // Auth middleware | Checks for access token in authorization headers of req & verifies the token with Auth0 JSON Web Key Set(JWKS)
@@ -25,4 +26,37 @@ exports.checkRole = role => (req, res, next) => {
     } else {
         return res.status(401).send('You are not authorized to access this data');
     }
+}
+
+
+exports.getAccessToken = (callback) => {
+    const options = {
+        method: 'POST', //Req type
+        url: config.AUTH0_TOKEN_URL,
+        headers: { 'content-type': 'application/json' }, //Data format
+        form: { // data for auth0
+            grant_type: 'client_credentials',
+            client_id: config.AUTH0_CLIENT_ID,
+            client_secret: config.AUTH0_CLIENT_SECRET,
+            audience: config.AUTH0_AUDIENCE
+        }
+    }
+
+    return new Promise((resolve, reject) => {
+
+        request(options, (error, res, body) => { //This callback fn will be exe when a response from the server is received | error,res,body are-
+            //- received from the server's response
+
+            // Exe the received callback with the error, in case of any errors or exe the callback with the body, when the req is resolved
+            if (error) { reject(new Error(error)); }
+
+            // The body received from the server will be stringified, so it has to be conv to an obj
+            resolve(body ? JSON.parse(body) : '');
+        });
+    })
+
+}
+
+exports.getAuth0User = (accessToken, userId) => {
+    console.log(accessToken, userId);
 }
