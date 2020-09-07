@@ -6,13 +6,23 @@ const { getAccessToken, getAuth0User } = require('./auth')
 
 exports.getBlogs = async (req, res) => {
     const blogs = await Blog.find({ status: 'published' }).sort({ createdAt: -1 });
-    res.json(blogs);
+    const { access_token } = await getAccessToken(); //Since this fn will return a promise
+    const blogsWithUsers = [];
+    const authors = {};
 
+    for (let blog of blogs) {
+        // Check if authors has the userId of the author, assign the value or else make the request
+        const author = authors[blog.userId] || await getAuth0User(access_token)(blog.userId);
+        //This is to handle multiple authors if there are any other users other than the author who have the permissions to compose a blog
+        authors[author.user_id] = author; // creates a structure, where the authorId gets assigned with an author obj
+        blogsWithUsers.push({ blog, author });
+    }
+    return res.json(blogsWithUsers);
 }
 
 exports.getBlogById = async (req, res) => {
     const blog = await Blog.findById(req.params.id);
-    res.json(blog);
+    return res.json(blog);
 }
 
 exports.getBlogBySlug = async (req, res) => {
