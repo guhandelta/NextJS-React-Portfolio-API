@@ -1,7 +1,8 @@
 const jwt = require('express-jwt');
 const jwksRSA = require('jwks-rsa');
 const request = require('request');
-const config = require('../config/dev')
+const config = require('../config/dev');
+const { AUTH0_AUDIENCE, AUTH0_DOMAIN } = require('../config/dev');
 
 // Auth middleware | Checks for access token in authorization headers of req & verifies the token with Auth0 JSON Web Key Set(JWKS)
 exports.checkJWT = jwt({
@@ -58,5 +59,22 @@ exports.getAccessToken = (callback) => {
 }
 
 exports.getAuth0User = (accessToken, userId) => {
-    console.log(accessToken, userId);
+    const optionsObj = {
+        method: 'GET',
+        url: `${AUTH0_DOMAIN}/api/v2/users/${userId}?fields=name,picture,user_id`,
+        headers: { authorization: `Bearer ${accessToken}` }
+    };
+
+    return new Promise((resolve, reject) => {
+
+        request(optionsObj, (error, res, body) => { //This callback fn will be exe when a response from the server is received | error,res,body are-
+            //- received from the server's response
+
+            // Exe the received callback with the error, in case of any errors or exe the callback with the body, when the req is resolved
+            if (error) { reject(new Error(error)); }
+
+            // The body received from the server will be stringified, so it has to be conv to an obj
+            resolve(body ? JSON.parse(body) : '');
+        });
+    })
 }

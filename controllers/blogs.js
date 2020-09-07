@@ -23,7 +23,7 @@ exports.getBlogBySlug = async (req, res) => {
     const { access_token } = await getAccessToken(); //Since this fn will return a promise
     const user = await getAuth0User(access_token, blog.userId);
 
-    return res.json(blog);
+    return res.json({ blog, user });
 }
 
 exports.createBlog = async (req, res) => {
