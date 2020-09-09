@@ -41,7 +41,7 @@ const data = {
             jobTitle: 'Web Developer',
             description: 'Design and maintain databases using Python and developed Python-based API (RESTful Web Service) using Flask, SQL Alchemy and PostgreSQL <br />• Developed responsive component based UI for the application using React JS, Bootstrap. <br />• Developed the jQuery callback functions to implement asynchronous communication using AJAX.',
             userId: 'google-oauth2|101848771434318992569',
-            startDate: '05/01/2015',
+            startDate: '07/01/2015',
             endDate: '02/01/2016'
         },
         {
@@ -58,7 +58,7 @@ const data = {
         {
             title: 'Web Developer',
             company: 'Stadium Sports',
-            companyWebsite: '',
+            companyWebsite: '       ',
             location: 'Huntington, West Virginia',
             jobTitle: 'Web Developer',
             description: '•	Developed RESTful services with NodeJS Loopback Framework. <br /> •	Created Node.JS middleware application server to encapsulate modern JS widget framework. <br /> •	Developed the Front end / UI components using: HTML5, CSS3, CSS Preprocessors(such as: Sass and LESS), JavaScript. <br /> •	Made the website’s UI responsive using Bootstrap4, along with AJAX. <br /> •	Designed dynamic client - side JavaScript codes to build web forms and simulate process for a web application, page navigation using React JS <br /> ',
@@ -136,7 +136,7 @@ const data = {
             title: 'Fullstack Developer',
             company: 'Discover Financial Services',
             companyWebsite: 'https://www.discover.com/',
-            location: 'Parsippany, NJ',
+            location: 'Riverwoods, IL',
             jobTitle: 'Fullstack Developer',
             description: '•	Developed responsive single page applications using NextJS, React JS, ASS, JavaScript/ES6, and Node.js <br /> •	Developed a server using Python Flask with endpoints to provide data to the UI <br /> •	Worked as the application lead to confirm the tech stack for the application <br /> •	Worked with team in developing an interactive menu with elegant animations using D3.js <br /> •	Designed reusable components to consume REST API\'s with Component - based architecture provided by React JS<br /> •	Developed ReactJS UI components using popular JS testing libraries like Jest and Enzyme, in a test - driven approach < br /> •	Used Dynamo DB for faster transactions utilizing the in -memory caching feature provided by dynamo DB <br /> ',
             userId: 'google-oauth2|101848771434318992569',
