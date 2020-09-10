@@ -4,7 +4,7 @@ const Portfolio = mongoose.model('Portfolio'); // Capitalizing the 1st alphabet 
 
 exports.getPortfolios = async (req, res) => {
     // Portfolio models provide lots of funcitions | find() fetch data from db and find({}) fetches everything
-    const portfolios = await Portfolio.find({});
+    const portfolios = await Portfolio.find({}).sort({ createdAt: -1 });
     return res.json(portfolios);
 }
 

@@ -17,7 +17,7 @@ const data = {
             companyWebsite: 'http://foresighttechnologies.co.in/',
             location: 'Coimbatore, Tamil Nadu, India',
             jobTitle: 'Web Developer',
-            description: '•	Designed an internal web application, with a responsive interface using HTML5/CSS3, JavaScript,  and Bootstrap 3.<br />•	The entire employee information was stored and managed over a MySQL database\n•	Debugged web applications and software with complete accuracy, to render a bug free code.\n•	Gathered requirements the Managers and Team Lead to design the application structure to develop an application that can be easily ported to other projects, easily and will lesser changes\n•	A Robust backend was designed using PHP Laravel, which made creating and assigning user roles much easier',
+            description: '•	Designed an internal web application, with a responsive interface using HTML5/CSS3, JavaScript,  and Bootstrap 3. •	The entire employee information was stored and managed over a MySQL database\n•	Debugged web applications and software with complete accuracy, to render a bug free code.\n•	Gathered requirements the Managers and Team Lead to design the application structure to develop an application that can be easily ported to other projects, easily and will lesser changes\n•	A Robust backend was designed using PHP Laravel, which made creating and assigning user roles much easier',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '01/01/2014',
             endDate: '01/01/2016'
@@ -39,7 +39,7 @@ const data = {
             companyWebsite: 'https://www.marshall.edu/campusrec/',
             location: 'Huntington, West Virginia',
             jobTitle: 'Web Developer',
-            description: 'Design and maintain databases using Python and developed Python-based API (RESTful Web Service) using Flask, SQL Alchemy and PostgreSQL <br />• Developed responsive component based UI for the application using React JS, Bootstrap. <br />• Developed the jQuery callback functions to implement asynchronous communication using AJAX.',
+            description: 'Design and maintain databases using Python and developed Python-based API (RESTful Web Service) using Flask, SQL Alchemy and PostgreSQL  • Developed responsive component based UI for the application using React JS, Bootstrap.  • Developed the jQuery callback functions to implement asynchronous communication using AJAX.',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '07/01/2015',
             endDate: '02/01/2016'
@@ -50,7 +50,7 @@ const data = {
             companyWebsite: 'https://wvaquavit.marshall.edu/',
             location: 'Huntington, West Virginia',
             jobTitle: 'IOT Developer',
-            description: '•	Developed a wireless sensor network using Raspberry Pi 3, Arduino <br /> •	Attached and configures a Vernier Water pH sensor to actively read and report water pH value, of Ohio River <br /> •	IBM Bluemix was the cloud platform use here to receive the water pH values and report the project admin about any changes in the pH level <br /> ',
+            description: '•	Developed a wireless sensor network using Raspberry Pi 3, Arduino   •	Attached and configures a Vernier Water pH sensor to actively read and report water pH value, of Ohio River   •	IBM Bluemix was the cloud platform use here to receive the water pH values and report the project admin about any changes in the pH level   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '03/01/2016',
             endDate: '05/01/2016'
@@ -61,7 +61,7 @@ const data = {
             companyWebsite: '       ',
             location: 'Huntington, West Virginia',
             jobTitle: 'Web Developer',
-            description: '•	Developed RESTful services with NodeJS Loopback Framework. <br /> •	Created Node.JS middleware application server to encapsulate modern JS widget framework. <br /> •	Developed the Front end / UI components using: HTML5, CSS3, CSS Preprocessors(such as: Sass and LESS), JavaScript. <br /> •	Made the website’s UI responsive using Bootstrap4, along with AJAX. <br /> •	Designed dynamic client - side JavaScript codes to build web forms and simulate process for a web application, page navigation using React JS <br /> ',
+            description: '•	Developed RESTful services with NodeJS Loopback Framework.   •	Created Node.JS middleware application server to encapsulate modern JS widget framework.   •	Developed the Front end / UI components using: HTML5, CSS3, CSS Preprocessors(such as: Sass and LESS), JavaScript.   •	Made the website’s UI responsive using Bootstrap4, along with AJAX.   •	Designed dynamic client - side JavaScript codes to build web forms and simulate process for a web application, page navigation using React JS   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '07/01/2015',
             endDate: '12/01/2016'
@@ -83,7 +83,7 @@ const data = {
             companyWebsite: 'https://n2sglobal.com/',
             location: 'Jacksonville, FL',
             jobTitle: 'Fullstack Java Developer',
-            description: '•	Implemented Angular app with CRUD features utilizing all concepts of Angular 4 i.e. Data binding, Components, Directives, and user-defined directives, Routing, Observables, Forms, Pipes, Services with Dependency Injection <br /> •	Worked with Angular 2 forms like Template Driven forms and Reactive forms(Dynamic Forms) to perform form validations both on server and client side <br /> •	Developed the business logic using Java Spring MVC and deployed components on Web Sphere Application server Bootstrap used along with Angular 2 in creating the Application. <br /> •	Used NodeJS for doing non - blocking design operation for server side code. <br /> •	Used Angular 2 framework in developing various UI components. <br /> ',
+            description: '•	Implemented Angular app with CRUD features utilizing all concepts of Angular 4 i.e. Data binding, Components, Directives, and user-defined directives, Routing, Observables, Forms, Pipes, Services with Dependency Injection   •	Worked with Angular 2 forms like Template Driven forms and Reactive forms(Dynamic Forms) to perform form validations both on server and client side   •	Developed the business logic using Java Spring MVC and deployed components on Web Sphere Application server Bootstrap used along with Angular 2 in creating the Application.   •	Used NodeJS for doing non - blocking design operation for server side code.   •	Used Angular 2 framework in developing various UI components.   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '07/01/2017',
             endDate: '11/01/2017'
@@ -94,7 +94,7 @@ const data = {
             companyWebsite: 'http://veridicsolutions.com//',
             location: 'Pleasanton, CA',
             jobTitle: 'Cloud Developer',
-            description: '•	Designed and managed public/private cloud infrastructures using Amazon Web Services (AWS). <br /> •	Deployed Web Applications into Amazon AWS by configuring the Elastic Beanstalk application and environment <br /> •	Worked On - Premise migration into AWS, over a dedicated connection using AWS Direct Connect <br /> •	Analyze AWS based product for defects, and enhance automated testing to prevent regression. <br /> •	Developed cookbooks using Chef for Deploying services on Hybrid environments, both Windows and Linux <br /> •	Developing a deployment management system for Docker Containers in AWS Elastic Container Service. <br /> •	Converted numerous existing Java projects to a single deployment method using ECS Docker Containers. <br /> •	Used Cloud Watch for monitoring AWS cloud resources and the applications that deployed on AWS by creating new alarm, enable notification service. <br /> ',
+            description: '•	Designed and managed public/private cloud infrastructures using Amazon Web Services (AWS).   •	Deployed Web Applications into Amazon AWS by configuring the Elastic Beanstalk application and environment   •	Worked On - Premise migration into AWS, over a dedicated connection using AWS Direct Connect   •	Analyze AWS based product for defects, and enhance automated testing to prevent regression.   •	Developed cookbooks using Chef for Deploying services on Hybrid environments, both Windows and Linux   •	Developing a deployment management system for Docker Containers in AWS Elastic Container Service.   •	Converted numerous existing Java projects to a single deployment method using ECS Docker Containers.   •	Used Cloud Watch for monitoring AWS cloud resources and the applications that deployed on AWS by creating new alarm, enable notification service.   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '11/01/2017',
             endDate: '03/01/2018'
@@ -116,7 +116,7 @@ const data = {
             companyWebsite: 'https://express-scripts.com/',
             location: 'Franklin Lakes, NJ',
             jobTitle: 'React JS Developer',
-            description: '•	Developed SPA using HTML5/CSS3, SASS, JavaScript/JSX, React JS, Redux, JSON, Node.js, and Ajax Developed the backend by using Node.js, Express and MongoDB <br /> •	Utilized React Server - Side Rendering, to make the website faster by handling UI exceptions at server side <br /> •	Composed Unit Test cases using Jest - Enzyme for the ReactJS components, in a test - driven approach <br /> •	Used Node.js to run Grunt tasks and build properly the project(compile, minify, concat etc.) <br /> •	Developed single application to render dynamically based on the JSON from the Node JS server <br /> •	Used popular Node.js frameworks like Express and Restify to create a Restful Mock API <br /> •	Developed MEAN Stack from scratch including Mongo DB server setup and Express JS server development. <br /> •	Extensive use of Node JS, Express JS, and Mongo DB along with Mongoose.JS to create server side applications <br /> ',
+            description: '•	Developed SPA using HTML5/CSS3, SASS, JavaScript/JSX, React JS, Redux, JSON, Node.js, and Ajax Developed the backend by using Node.js, Express and MongoDB   •	Utilized React Server - Side Rendering, to make the website faster by handling UI exceptions at server side   •	Composed Unit Test cases using Jest - Enzyme for the ReactJS components, in a test - driven approach   •	Used Node.js to run Grunt tasks and build properly the project(compile, minify, concat etc.)   •	Developed single application to render dynamically based on the JSON from the Node JS server   •	Used popular Node.js frameworks like Express and Restify to create a Restful Mock API   •	Developed MEAN Stack from scratch including Mongo DB server setup and Express JS server development.   •	Extensive use of Node JS, Express JS, and Mongo DB along with Mongoose.JS to create server side applications   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '12/01/2018',
             endDate: '08/01/2019'
@@ -127,7 +127,7 @@ const data = {
             companyWebsite: 'https://cards.barclaycardus.com/',
             location: 'Parsippany, NJ',
             jobTitle: 'Fullstack Developer',
-            description: '•	Designed Responsive Single Page Application using React JS, JSON, SASS/SCSS <br /> •	Developed an application using React JS, Redux, ES6, and Bootstrap in a Test - Driven Development Environment. <br /> •	Cooperate with UX team and redesigned using React - Bootstrap and React - UI to improve business competencies, also makes the website more attractive. <br /> •	Consume RESTful resources using AJAX call, receiving, analyzing and processing JSON responses to get the required proper - formatted data. <br /> •	Experience in React Js and working with React Redux architecture and using React Js Components, Forms, Event, Keys, Router concepts. <br /> •	Contributed to design and development of the UI for the Credit Card Offers Portal Developed a Rating Results viewing and analysis single page web app portal using React JS. <br /> •	Worked on React JS Virtual Dom and React views, rendering using components which contains additional components called custom HTML tags. <br /> ',
+            description: '•	Designed Responsive Single Page Application using React JS, JSON, SASS/SCSS   •	Developed an application using React JS, Redux, ES6, and Bootstrap in a Test - Driven Development Environment.   •	Cooperate with UX team and redesigned using React - Bootstrap and React - UI to improve business competencies, also makes the website more attractive.   •	Consume RESTful resources using AJAX call, receiving, analyzing and processing JSON responses to get the required proper - formatted data.   •	Experience in React Js and working with React Redux architecture and using React Js Components, Forms, Event, Keys, Router concepts.   •	Contributed to design and development of the UI for the Credit Card Offers Portal Developed a Rating Results viewing and analysis single page web app portal using React JS.   •	Worked on React JS Virtual Dom and React views, rendering using components which contains additional components called custom HTML tags.   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '08/01/2019',
             endDate: '12/01/2019'
@@ -138,7 +138,7 @@ const data = {
             companyWebsite: 'https://www.discover.com/',
             location: 'Riverwoods, IL',
             jobTitle: 'Fullstack Developer',
-            description: '•	Developed responsive single page applications using NextJS, React JS, ASS, JavaScript/ES6, and Node.js <br /> •	Developed a server using Python Flask with endpoints to provide data to the UI <br /> •	Worked as the application lead to confirm the tech stack for the application <br /> •	Worked with team in developing an interactive menu with elegant animations using D3.js <br /> •	Designed reusable components to consume REST API\'s with Component - based architecture provided by React JS<br /> •	Developed ReactJS UI components using popular JS testing libraries like Jest and Enzyme, in a test - driven approach < br /> •	Used Dynamo DB for faster transactions utilizing the in -memory caching feature provided by dynamo DB <br /> ',
+            description: '•	Developed responsive single page applications using NextJS, React JS, ASS, JavaScript/ES6, and Node.js   •	Developed a server using Python Flask with endpoints to provide data to the UI   •	Worked as the application lead to confirm the tech stack for the application   •	Worked with team in developing an interactive menu with elegant animations using D3.js   •	Designed reusable components to consume REST API\'s with Component - based architecture provided by React JS  •	Developed ReactJS UI components using popular JS testing libraries like Jest and Enzyme, in a test - driven approach < br /> •	Used Dynamo DB for faster transactions utilizing the in -memory caching feature provided by dynamo DB   ',
             userId: 'google-oauth2|101848771434318992569',
             startDate: '12/15/2019',
             endDate: '7/01/2020'
