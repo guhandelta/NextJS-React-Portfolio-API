@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const config = require('../config/dev')
+const config = require('../config')
 
 require('./models/portfolio');
 require('./models/blog');

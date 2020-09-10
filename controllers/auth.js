@@ -1,8 +1,7 @@
 const jwt = require('express-jwt');
 const jwksRSA = require('jwks-rsa');
 const request = require('request');
-const config = require('../config/dev');
-const { AUTH0_AUDIENCE, AUTH0_DOMAIN } = require('../config/dev');
+const config = require('../config');
 
 // Auth middleware | Checks for access token in authorization headers of req & verifies the token with Auth0 JSON Web Key Set(JWKS)
 exports.checkJWT = jwt({
