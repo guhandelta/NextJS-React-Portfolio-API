@@ -13,6 +13,10 @@ async function startServer() {
     // Parse the req body into json
     server.use(bodyParser.json());
 
+    server.get('', (req, res) => {
+        res.sendFile('index.html', { root: __dirname });
+    })
+
     // This is one way of joining routes. This endpoint is for the route /api/v1/portfolios, after reaching this route, the navigation jumps-
     //- over to portfolios.js, which takes care of the rest routing, depending upon the route specified after /api/v1, in the req
     server.use('/api/v1/portfolios', require('./routes/portfolios'));
