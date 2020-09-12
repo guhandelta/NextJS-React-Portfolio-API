@@ -60,7 +60,7 @@ exports.getAccessToken = (callback) => {
 exports.getAuth0User = (accessToken) => (userId) => {
     const optionsObj = {
         method: 'GET',
-        url: `${AUTH0_DOMAIN}/api/v2/users/${userId}?fields=name,picture,user_id`,
+        url: `${config.AUTH0_DOMAIN}/api/v2/users/${userId}?fields=name,picture,user_id`,
         headers: { authorization: `Bearer ${accessToken}` }
     };
 
