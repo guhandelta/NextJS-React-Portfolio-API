@@ -14,7 +14,7 @@ async function startServer() {
     server.use(bodyParser.json());
 
     server.get('', (req, res) => {
-        res.sendFile('index.html', { root: __dirname });
+        res.sendFile('index.html', { root: __dirname }); // root - points to current dir | ___dirname - to get hte path to root dir
     })
 
     // This is one way of joining routes. This endpoint is for the route /api/v1/portfolios, after reaching this route, the navigation jumps-
